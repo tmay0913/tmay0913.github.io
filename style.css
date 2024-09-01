@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-image: url("img/mtn-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    height: 5rem;
+    /* background-color: rgba(255, 255, 255, 0.5); */
+    position: relative;
+
+    .menu-title a {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 800;
+        color: lightskyblue;
+        font-size: 30px;
+        text-shadow: 0 1px 2px black;
+        text-decoration: none;
+        margin-left: 15px;
+    }
+
+    .toggle-switch {
+        margin-right: 15px;
+        color: rgb(36, 163, 241);
+        display: none;
+    }
+    
+    nav {
+        ul {
+            list-style: none;
+            height: 5rem;
+            display: flex;
+        }
+    
+        li {
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+    
+        li a {
+            text-decoration: none;
+            color: rgb(36, 163, 241);
+            padding: 8px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 18px;
+            font-weight: 500;
+        }
+    
+        li a:hover {
+            border-bottom: 3px solid rgb(36, 163, 241);
+            font-size: 19px;
+        }
+    }
+
+    @media screen and (max-width: 475px) {
+        .toggle-switch {
+            display: block;
+        }
+
+        nav {
+            display: none;
+            position: absolute;
+            top: 100%;
+        }
+
+        nav ul {
+            flex-direction: column;
+        }
+
+        nav li {
+            width: 100vw;
+            background-color: rgba(255, 255, 255, 0);
+        }
+
+        nav li a {
+            width: 100%;
+            text-align: center;
+        }
+
+        nav li a:hover {
+            border: none;
+        }
+    }
+}
